@@ -1,0 +1,11 @@
+[package]
+name = "movedid_ai_guardian"
+version = "0.1.0"
+
+[dependencies]
+AptosFramework = { git = "https://github.com/aptos-labs/aptos-core.git", subdir = "aptos-move/framework/aptos-framework" }
+
+[addresses]
+movedid_ai_guardian = "0x123..."  # Replace with your account address
+std = "0x1"
+aptos_framework = "0x1"
