@@ -147,7 +147,7 @@
 
 ### 📞 Contact & Information
 
-* **GitHub**: [[Website](https://github.com/Lesnak1?tab=repositories)]
+* **GitHub**: https://github.com/Lesnak1?tab=repositories
 * **Email**: philosophyfactss@gmail.com
 * **Telegram**: @lesnacrex
 * **Twitter**: https://x.com/MoveAiid
