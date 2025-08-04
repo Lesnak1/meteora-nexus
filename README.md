@@ -1,7 +1,9 @@
 # Meteora Nexus - DeFi Analytics Dashboard
 
 A modern, responsive dashboard for exploring and analyzing Meteora DeFi protocol data on Solana. Built with Next.js 15, TypeScript, and Tailwind CSS.
-
+---
+**Website:** https://meteora-nexus.vercel.app/
+---
 ## ✨ Features
 
 - **Real-time Analytics**: Dynamic charts and metrics for TVL, volume, and pool performance
