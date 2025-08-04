@@ -274,11 +274,14 @@ export function generateChartData(baseTvl?: number, baseVolume?: number): ChartD
     const tvlVariation = tvl * (0.85 + Math.random() * 0.3); // ±15% variation
     const volumeVariation = volume * (0.7 + Math.random() * 0.6); // ±30% variation
     
-    data.push({
-      date: date.toISOString().split('T')[0],
-      tvl: tvlVariation,
-      volume: volumeVariation
-    });
+    const dateString = date.toISOString().split('T')[0];
+    if (dateString) {
+      data.push({
+        date: dateString,
+        tvl: tvlVariation,
+        volume: volumeVariation
+      });
+    }
   }
   
   return data;
