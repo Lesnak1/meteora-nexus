@@ -153,7 +153,7 @@ export default function FAQPage() {
         </h1>
         <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto mb-8">
           Find answers to common questions about Meteora DLMM, Dynamic Vaults, and Launch Pools. 
-          Can't find what you're looking for? Contact our support team.
+          Can&apos;t find what you&apos;re looking for? Contact our support team.
         </p>
       </div>
 

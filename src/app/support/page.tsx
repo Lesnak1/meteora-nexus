@@ -114,7 +114,7 @@ export default function SupportPage() {
           Support Center
         </h1>
         <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto mb-8">
-          We're here to help! Choose the best way to get in touch with our support team. 
+          We&apos;re here to help! Choose the best way to get in touch with our support team. 
           Most questions are answered within a few hours.
         </p>
         
@@ -178,7 +178,7 @@ export default function SupportPage() {
               Send us a Message
             </CardTitle>
             <CardDescription>
-              Fill out the form below and we'll get back to you as soon as possible.
+              Fill out the form below and we&apos;ll get back to you as soon as possible.
             </CardDescription>
           </CardHeader>
           <CardContent>
