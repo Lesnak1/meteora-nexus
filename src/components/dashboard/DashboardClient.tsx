@@ -104,7 +104,7 @@ export function DashboardClient() {
         {/* Hero Section */}
         <div className="mb-12 text-center">
           <div className="animate-reveal-up">
-            <h1 className="text-4xl sm:text-6xl font-bold bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 bg-clip-text text-transparent mb-6 animate-gradient">
+            <h1 className="text-5xl sm:text-7xl font-black tracking-tight bg-gradient-to-r from-orange-500 via-red-500 via-pink-500 to-purple-600 bg-clip-text text-transparent mb-6 animate-gradient drop-shadow-2xl" style={{fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", "SF Pro Display", sans-serif', letterSpacing: '-0.02em'}}>
               Meteora Intelligence Dashboard
             </h1>
             <p className="text-lg sm:text-2xl text-slate-700 dark:text-slate-300 max-w-4xl mx-auto leading-relaxed mb-8">
@@ -118,9 +118,9 @@ export function DashboardClient() {
                 </Button>
               </Link>
               <Link href="/analytics">
-                <Button variant="glass" size="lg" className="border border-orange-200 dark:border-orange-800 hover:bg-orange-50 dark:hover:bg-orange-950/20">
-                  <Target className="w-5 h-5 mr-2" />
-                  View Analytics
+                <Button variant="glass" size="lg" className="border-2 border-purple-300 dark:border-purple-600 bg-gradient-to-r from-purple-100 to-pink-100 dark:from-purple-900/50 dark:to-pink-900/50 hover:from-purple-200 hover:to-pink-200 dark:hover:from-purple-800/50 dark:hover:to-pink-800/50 text-purple-800 dark:text-purple-200 font-semibold shadow-lg hover:shadow-xl transition-all duration-200">
+                  <Target className="w-5 h-5 mr-2 text-purple-600 dark:text-purple-400" />
+                  <span className="text-purple-800 dark:text-purple-200">View Analytics</span>
                 </Button>
               </Link>
             </div>
