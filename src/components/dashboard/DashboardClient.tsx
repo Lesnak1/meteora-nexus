@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useState, useCallback } from 'react';
+import Link from 'next/link';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { formatNumber, formatCurrency, formatPercentage } from '@/lib/utils';
@@ -110,14 +111,18 @@ export function DashboardClient() {
               Advanced analytics and insights for the Meteora DeFi ecosystem. Real-time data, AI-powered strategies, and comprehensive portfolio management.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="meteora" size="lg" className="animate-pulse-grow bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 shadow-lg hover:shadow-xl transition-all duration-200">
-                <Zap className="w-5 h-5 mr-2" />
-                Explore Pools
-              </Button>
-              <Button variant="glass" size="lg" className="border border-orange-200 dark:border-orange-800 hover:bg-orange-50 dark:hover:bg-orange-950/20">
-                <Target className="w-5 h-5 mr-2" />
-                View Analytics
-              </Button>
+              <Link href="/pools">
+                <Button variant="meteora" size="lg" className="animate-pulse-grow bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 shadow-lg hover:shadow-xl transition-all duration-200">
+                  <Zap className="w-5 h-5 mr-2" />
+                  Explore Pools
+                </Button>
+              </Link>
+              <Link href="/analytics">
+                <Button variant="glass" size="lg" className="border border-orange-200 dark:border-orange-800 hover:bg-orange-50 dark:hover:bg-orange-950/20">
+                  <Target className="w-5 h-5 mr-2" />
+                  View Analytics
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -310,9 +315,11 @@ export function DashboardClient() {
               <Zap className="w-5 h-5 text-yellow-500" />
               Top Performing Pools
             </span>
-            <Button variant="neon" size="sm">
-              View All Pools
-            </Button>
+            <Link href="/pools">
+              <Button variant="neon" size="sm">
+                View All Pools
+              </Button>
+            </Link>
           </CardTitle>
           <CardDescription>
             Highest volume and best performing liquidity pools
@@ -370,9 +377,11 @@ export function DashboardClient() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <Button variant="meteora" className="w-full group-hover:scale-110 transition-transform">
-              View DLMM Pools
-            </Button>
+            <Link href="/pools">
+              <Button variant="meteora" className="w-full group-hover:scale-110 transition-transform">
+                View DLMM Pools
+              </Button>
+            </Link>
           </CardContent>
         </Card>
 
@@ -387,9 +396,11 @@ export function DashboardClient() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <Button variant="gradient" className="w-full group-hover:scale-110 transition-transform">
-              Explore Vaults
-            </Button>
+            <Link href="/vaults">
+              <Button variant="gradient" className="w-full group-hover:scale-110 transition-transform">
+                Explore Vaults
+              </Button>
+            </Link>
           </CardContent>
         </Card>
 
@@ -404,9 +415,11 @@ export function DashboardClient() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <Button variant="neon" className="w-full group-hover:scale-110 transition-transform">
-              View Launches
-            </Button>
+            <Link href="/launch">
+              <Button variant="neon" className="w-full group-hover:scale-110 transition-transform">
+                View Launches
+              </Button>
+            </Link>
           </CardContent>
         </Card>
       </div>

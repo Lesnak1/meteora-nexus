@@ -59,8 +59,8 @@ export default function AnalyticsPage() {
       const dateStr = date.toISOString().split('T')[0];
 
       if (dateStr) {
-        const baseTvl = 1000000000 + (Math.sin(i * 0.1) * 100000000) + (Math.random() * 50000000);
-        const baseVolume = 200000000 + (Math.sin(i * 0.15) * 100000000) + (Math.random() * 80000000);
+        const baseTvl = 45000000 + (Math.sin(i * 0.1) * 8000000) + (Math.random() * 5000000);
+        const baseVolume = 8500000 + (Math.sin(i * 0.15) * 3000000) + (Math.random() * 2000000);
         
         tvlHistory.push({
           date: dateStr,
@@ -71,14 +71,14 @@ export default function AnalyticsPage() {
         volumeHistory.push({
           date: dateStr,
           volume: baseVolume,
-          trades: 15000 + Math.floor(Math.random() * 10000)
+          trades: 7500 + Math.floor(Math.random() * 5000)
         });
 
         userMetrics.push({
           date: dateStr,
-          activeUsers: 25000 + Math.floor(Math.random() * 15000),
-          newUsers: 1500 + Math.floor(Math.random() * 1000),
-          transactions: 125000 + Math.floor(Math.random() * 50000)
+          activeUsers: 12500 + Math.floor(Math.random() * 7500),
+          newUsers: 750 + Math.floor(Math.random() * 500),
+          transactions: 62500 + Math.floor(Math.random() * 25000)
         });
       }
     }
@@ -88,18 +88,18 @@ export default function AnalyticsPage() {
       volumeHistory,
       userMetrics,
       poolDistribution: [
-        { name: 'DLMM Pools', value: 45, amount: 495000000, color: '#8b5cf6' },
-        { name: 'Dynamic Vaults', value: 32, amount: 352000000, color: '#ec4899' },
-        { name: 'Launch Pools', value: 15, amount: 165000000, color: '#ef4444' },
-        { name: 'Stable Pools', value: 8, amount: 88000000, color: '#f97316' }
+        { name: 'DLMM Pools', value: 45, amount: 20250000, color: '#8b5cf6' },
+        { name: 'Dynamic Vaults', value: 32, amount: 14400000, color: '#ec4899' },
+        { name: 'Launch Pools', value: 15, amount: 6750000, color: '#ef4444' },
+        { name: 'Stable Pools', value: 8, amount: 3600000, color: '#f97316' }
       ],
       topTokens: [
-        { symbol: 'SOL', tvl: 456000000, volume24h: 89000000, change24h: 2.3, pools: 156 },
-        { symbol: 'USDC', tvl: 278000000, volume24h: 67000000, change24h: 0.1, pools: 203 },
-        { symbol: 'mSOL', tvl: 189000000, volume24h: 34000000, change24h: 1.8, pools: 89 },
-        { symbol: 'JUP', tvl: 123000000, volume24h: 45000000, change24h: 4.2, pools: 67 },
-        { symbol: 'USDT', tvl: 98000000, volume24h: 23000000, change24h: -0.2, pools: 134 },
-        { symbol: 'WIF', tvl: 76000000, volume24h: 18000000, change24h: -2.1, pools: 45 }
+        { symbol: 'SOL', tvl: 18500000, volume24h: 3800000, change24h: 2.3, pools: 156 },
+        { symbol: 'USDC', tvl: 11300000, volume24h: 2900000, change24h: 0.1, pools: 203 },
+        { symbol: 'mSOL', tvl: 7600000, volume24h: 1450000, change24h: 1.8, pools: 89 },
+        { symbol: 'JUP', tvl: 5000000, volume24h: 1920000, change24h: 4.2, pools: 67 },
+        { symbol: 'USDT', tvl: 3900000, volume24h: 980000, change24h: -0.2, pools: 134 },
+        { symbol: 'WIF', tvl: 3100000, volume24h: 770000, change24h: -2.1, pools: 45 }
       ]
     };
   }, [timeRange]);
@@ -107,13 +107,10 @@ export default function AnalyticsPage() {
   const fetchAnalytics = useCallback(async () => {
     try {
       setLoading(true);
-      const response = await fetch(`/api/meteora/analytics?range=${timeRange}`);
-      if (response.ok) {
-        const data = await response.json();
-        setAnalytics(data);
-      }
+      // Use frontend-only data instead of API
+      setAnalytics(generateFallbackData());
     } catch (error) {
-      console.error('Error fetching analytics:', error);
+      console.error('Error generating analytics:', error);
       setAnalytics(generateFallbackData());
     } finally {
       setLoading(false);
